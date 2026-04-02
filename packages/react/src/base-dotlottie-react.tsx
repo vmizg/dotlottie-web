@@ -198,10 +198,6 @@ export const BaseDotLottieReact = <T extends DotLottie | DotLottieWorker>({
   }, [props.marker]);
 
   useEffect(() => {
-    dotLottieRef.current?.loadAnimation(animationId ?? '');
-  }, [animationId]);
-
-  useEffect(() => {
     if (typeof themeId === 'string') {
       dotLottieRef.current?.setTheme(themeId);
     } else {
